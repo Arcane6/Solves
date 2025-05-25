@@ -17,11 +17,11 @@ class InvoiceService:
         )
     
     @staticmethod
-    async def get_by_month_and_year(month: int, year: int):
+    async def get_by_month_and_year(month: int, year: int) -> Invoice:
         return await Invoice.filter(month=month, year=year).all()
     
     @staticmethod
-    async def generate_all_invoices(subscription_id: Subscription, year: int):
+    async def generate_all_invoices(subscription_id: Subscription, year: int) -> None:
         sub = await Subscription.get(id=subscription_id)
 
         if sub.plan.recurrence == "mensal":
@@ -29,5 +29,5 @@ class InvoiceService:
                 await InvoiceService.generate_invoice(sub, month, year)
 
     @staticmethod
-    async def get_pending_by_subscription(subscription: Subscription):
+    async def get_pending_by_subscription(subscription: Subscription) -> list[Invoice]:
         return await Invoice.filter(subscription=subscription, status="pendente").all()

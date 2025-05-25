@@ -4,10 +4,11 @@ from app.models.user_session import UserSession
 
 class SessionService:
     @staticmethod
-    async def create_session(user: User, session_token: str, ip: str, user_agent: str):
+    async def create_session(user: User, session_token: str, refresh_token: str, ip: str, user_agent: str):
         return await UserSession.create(
             user=user,
             session_token=session_token,
+            refresh_token=refresh_token,
             ip_address=ip,
             user_agent=user_agent
         )

@@ -40,6 +40,10 @@ Desenvolvido com **FastAPI**, **Tortoise ORM**, **Celery**, **RabbitMQ**, e uma 
 └── requirements.txt       # Dependências
 
 
+### Configurando variáveis de ambiente
+Gere uma chave secreta segura:
+```bash
+python -c "import secrets; print(secrets.token_urlsafe(64))"
 
 
 

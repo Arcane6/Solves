@@ -15,6 +15,7 @@ TORTOISE_ORM = {
                 "app.models.invoice",
                 "app.models.overdue",
                 "app.models.user_session",
+                "app.models.log"
             ],
             "default_connection": "default",
         },

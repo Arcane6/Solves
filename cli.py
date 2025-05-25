@@ -3,6 +3,8 @@ import subprocess
 
 cli = typer.Typer()
 
+
+
 @cli.command()
 def start_worker():
     """Inicia o worker Celery."""
@@ -14,6 +16,10 @@ def start_worker():
         "--pool=solo"
     ])
 
+@cli.command()
+def make_migrations():
+    """Busca as migrações"""
+    subprocess.run(["aerich", "migrate"])
 
 @cli.command()
 def migrate():
