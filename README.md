@@ -39,10 +39,10 @@ Desenvolvido com **FastAPI**, **Tortoise ORM**, **Celery**, **RabbitMQ**, e uma 
 ├── docker-compose.yml     # Configuração do Docker Compose
 └── requirements.txt       # Dependências
 
+```
 
 ### Configurando variáveis de ambiente
 Gere uma chave secreta segura:
-```bash
 python -c "import secrets; print(secrets.token_urlsafe(64))"
 
 
