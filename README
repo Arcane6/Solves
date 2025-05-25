@@ -26,7 +26,6 @@ Desenvolvido com **FastAPI**, **Tortoise ORM**, **Celery**, **RabbitMQ**, e uma 
 │   ├── schemas/           # Esquemas Pydantic
 │   ├── tasks/             # Tarefas Celery
 │   ├── dependencies/      # Dependências personalizadas
-│   ├── services/          # Regras de negócio
 │   ├── api/               # Rotas da API
 │   ├── middlewares/       # Middlewares customizados
 │   ├── services/          # Serviços auxiliares
